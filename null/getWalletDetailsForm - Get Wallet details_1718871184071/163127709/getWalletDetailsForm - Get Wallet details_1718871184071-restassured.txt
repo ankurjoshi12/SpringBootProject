@@ -1,0 +1,110 @@
+Request method:	GET
+Request URI:	http://bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com/wallet/v1/details
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-vouchers
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com
+				bb-decoded-mid=54593120
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=99343d00-46c4-4a9e-9a68-fe4d59a532f8
+				X-Timestamp=2024-06-20T16:31:28Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 20 Jun 2024 11:01:28 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 299
+Connection: keep-alive
+Server: nginx
+
+{
+    "enable": true,
+    "total_balance": 0,
+    "current_wallet_balance": 0,
+    "total_expiry_amount": 0,
+    "wallets": [
+        {
+            "name": "primary",
+            "balance": 0
+        }
+    ],
+    "recharge_denominations": [
+        100,
+        500,
+        1000,
+        2000
+    ],
+    "preferred_recharge_amt": 1000,
+    "recharge_limit_min": 10,
+    "recharge_limit_max": 10000,
+    "recharge_max_fixed": 10000,
+    "notification": {
+        
+    }
+}
+Request method:	POST
+Request URI:	http://bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com/wallet/internal/v1/activity
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-vouchers
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=31525294-d796-44a7-a070-dfc3930c097b
+				X-Timestamp=2024-06-20T16:31:28Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "member_id": 54593120,
+        "ec_id": 100,
+        "amount": 100,
+        "reference_id": "432412412",
+        "wallet_activity_type": "credit",
+        "secondary_reference_type": "",
+        "voucher_code": "",
+        "reference_type": "bbstar",
+        "reason_id": 13,
+        "additional_info": {
+            "multiple_payment_method": false
+        },
+        "send_communication": true,
+        "unique_request_id": "0a640b89-ebeb-476a-973c-4217bfc586e4",
+        "wallet_type": "primary",
+        "remarks": "Testing Single Credit for Migrated Member",
+        "secondary_reference_id": ""
+    }
+]
+HTTP/1.1 200 OK
+Date: Thu, 20 Jun 2024 11:01:29 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 143
+Connection: keep-alive
+Server: nginx
+
+[
+    {
+        "new_balance": 100,
+        "amount": 100,
+        "previous_balance": 0,
+        "activity_log_id": 536624130,
+        "unique_request_id": "0a640b89-ebeb-476a-973c-4217bfc586e4"
+    }
+]

@@ -1,0 +1,71 @@
+Request method:	POST
+Request URI:	http://hqa-svc.bigbasket.com/wallet/v1/activity-logs
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=hqa-svc.bigbasket.com
+				bb-decoded-mid=54593120
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=578eb771-90d8-48fc-9a9f-e29480bf02cf
+				X-Timestamp=2024-08-21T09:24:20Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "page_number": 1,
+    "filters": {
+        "ec_slugs": [
+            "bb-b2c"
+        ],
+        "activity_type": [
+            "debit",
+            "credit"
+        ],
+        "status": [
+            "success",
+            "incomplete",
+            "failed"
+        ]
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 21 Aug 2024 03:54:20 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 468
+Connection: keep-alive
+Server: nginx
+
+{
+    "total_wallet_logs": 1,
+    "total_page_count": 1,
+    "page_number": 1,
+    "offset": 100,
+    "activity_logs": [
+        {
+            "activity_log_id": 536624379,
+            "reference_id": "1399376573",
+            "reference_type": "order",
+            "reason_slug": "credit-used-for-order-creation",
+            "display_reason": "Paid for order",
+            "amount": 100,
+            "activity_type": "debit",
+            "created_on": "2024-07-10 18:39:13",
+            "closing_balance": 0,
+            "ec_id": 100,
+            "payment_log": false,
+            "order_item_log_required": false,
+            "additional_info": {
+                "description": "",
+                "short_message": ""
+            }
+        }
+    ]
+}

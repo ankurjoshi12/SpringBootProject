@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Voucher</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/user-details">Bigbasket Utils</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="javelinDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Javelin
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="javelinDropdown">
+                        <a class="dropdown-item" href="/create-voucher">Create Voucher</a>
+                        <a class="dropdown-item" href="/get-voucher-list">Get Voucher List</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Create Voucher</h1>
+        <form th:action="@{/create-voucher}" method="post">
+            <div class="form-group">
+                <label for="transactionType">Transaction Type</label>
+                <select id="transactionType" name="transactionType" class="form-control">
+                    <option value="checkout">Checkout</option>
+                    <option value="fund_wallet">Fund Wallet</option>
+                    <option value="gift_card">Gift Card</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rewardType">Reward Type</label>
+                <select id="rewardType" name="rewardType" class="form-control">
+                    <option value="cashback">Cashback</option>
+                    <option value="instant_discount">Instant Discount</option>
+                    <option value="free_delivery">Free Delivery</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="paymentType">Payment Type</label>
+                <select id="paymentType" name="paymentType" class="form-control">
+                    <option value="card">Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="wallet">Wallet</option>
+                    <option value="netbanking">Netbanking</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="autoVoucher">Auto Voucher</label>
+                <select id="autoVoucher" name="autoVoucher" class="form-control">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="voucherType">Voucher Type</label>
+                <select id="voucherType" name="voucherType" class="form-control">
+                    <option value="normal">Normal</option>
+                    <option value="series">Series</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Voucher</button>
+        </form>
+        <div th:if="${message != null}">
+            <p class="alert alert-success" th:text="${message}"></p>
+        </div>
+    </div>
+</body>
+</html>

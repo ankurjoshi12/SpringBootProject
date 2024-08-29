@@ -1,0 +1,57 @@
+{
+  "purchase_type": {
+    "min_amount": 50,
+    "type": "single_order"
+  },
+  "reward": {
+    "discount_amount": 50,
+    "type": "cashback",
+    "discount_type": "percent",
+    "max_discount_amount": 100
+  },
+  "redemption_limits": {
+    "campaign_level": 100,
+    "per_card": 5,
+    "per_day": 3,
+    "member_level": 10,
+    "per_hr": 1
+  },
+  "payment_mode": {
+    "card_network": [
+      "visa"
+    ],
+    "bin_list": "https://javelin-non-prod-external.s3.amazonaws.com/voucher/card_bin_list/717050_card_bin_list.csv",
+    "card_name": "League Platinum Card",
+    "issuer_bank": [
+      "KOTAK"
+    ],
+    "card_type": [
+      "credit"
+    ],
+    "payment_method": "card"
+  },
+  "voucher_type": {
+    "voucher_code": "20ibj53",
+    "type": "normal"
+  },
+  "asset": {
+    "logo": "s3 link",
+    "description": "ABCD",
+    "t_c": "terms and conditions",
+    "title": "ABC"
+  },
+  "auto_voucher": false,
+  "transaction_flow": "checkout",
+  "platform": [
+    "app",
+    "pwa"
+  ],
+  "funding_breakup": {
+    "marketing_central": 15,
+    "card_network": 5,
+    "vendor": 30,
+    "marketing_regional": 15,
+    "issuer_bank": 5,
+    "category": 30
+  }
+}

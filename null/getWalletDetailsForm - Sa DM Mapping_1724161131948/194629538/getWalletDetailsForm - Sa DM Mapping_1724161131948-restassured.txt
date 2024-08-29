@@ -1,0 +1,29 @@
+Request method:	GET
+Request URI:	http://jenkins.bigbasket.com/utils/executeDatabaseQuery?dbName=hqa-HERTZ&query=SELECT%20*%20FROM%20sa_dm_slot_config%20WHERE%20sa_id%3D%27345%27%20AND%20dm_id%3D%271%27%20AND%20slot_definition_id%3D24156263
+Proxy:			<none>
+Request params:	<none>
+Query params:	dbName=hqa-HERTZ
+				query=SELECT * FROM sa_dm_slot_config WHERE sa_id='345' AND dm_id='1' AND slot_definition_id=24156263
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Tenant-Id=1
+				Authorization=Basic YmJxYWJvdDpxYWJvdHBhc3N3b3Jk
+				Accept=*/*
+				X-Tracker=706907f2-7218-4b7d-a624-ce7cabbfae2e
+				X-Timestamp=2024-08-20T19:46:29Z
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 20 Aug 2024 14:16:29 GMT
+Content-Length: 556
+Connection: keep-alive
+Server: nginx/1.4.6 (Ubuntu)
+
+{
+  "columnNames" : [ "id", "created_on", "updated_on", "created_by_id", "updated_by_id", "sa_id", "dm_id", "slot_definition_id", "service_time", "service_time_linked_order", "routing_start_time", "routing_end_time", "routing_start_shipday", "routing_end_shipday", "vehicle_operating_start_time", "vehicle_operating_end_time", "additional_config", "outbound_call_end_window", "outbound_call_start_window", "slot_type_id", "is_dynamic_vehicle_conf_enabled", "dynamic_vehicle_conf" ],
+  "numColumns" : 22,
+  "numRows" : 0,
+  "results" : [ ],
+  "rows" : [ ]
+}

@@ -1,0 +1,152 @@
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/payment_svc/v2/payment/get-sdk-params/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				bb-decoded-mid=53622450
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=9f313e7a-27bd-4824-ac49-5e6c182d457a
+				X-Timestamp=2024-08-21T15:51:51Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "neucoins": "false",
+    "member_id": 53622450,
+    "amount": 100,
+    "app_version": "web",
+    "txn_type": "gift_card",
+    "member_email": "teamautomation-uat-jayanagar-6949003964@bigbasket.com",
+    "channel": "web",
+    "payment_method_locking": ""
+}
+HTTP/1.1 200 OK
+Date: Wed, 21 Aug 2024 10:21:52 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Content-Encoding: gzip
+Server: nginx
+Vary: Accept-Encoding
+
+{
+    "message": "success",
+    "response": {
+        "amount": 100,
+        "bb_txn_id": "f2d4f3e8d83ff456e521",
+        "client_id": "bigbasket_web",
+        "customer_id": "MzEwMjg4MjM5Ng==",
+        "env": "sandbox",
+        "fall_back": false,
+        "handle_payment_attempt": true,
+        "merchant_id": "bb_staging",
+        "merchant_key_id": "2769",
+        "mobile_no": 8888888888,
+        "offer_details": {
+            
+        },
+        "order_details": "{\"order_id\": \"f2d4f3e8d83ff456e521\", \"merchant_id\": \"bb_staging\", \"amount\": \"100\", \"timestamp\": \"1724235712\", \"customer_id\": \"MzEwMjg4MjM5Ng==\", \"udf1\": \"bigbasket\", \"udf2\": \"b2c\", \"udf3\": \"gift_card\", \"udf4\": \"1\", \"udf5\": \"\", \"offer_details\": {\"offer_applied\": \"false\"}, \"credit_billing\": \"false\", \"return_url\": \"https://bigbasket.com/\", \"metadata.amount_category\": {\"food\": \"0\", \"nonfood\": \"0\"}, \"metadata.JUSPAY:gateway_reference_id\": \"bigbasket_b2c_gift_card\", \"features\": {\"paymentAttempt\": {\"enable\": true}}}",
+        "order_summary": false,
+        "polling_interval": null,
+        "polling_timeout": null,
+        "return_url": "https://bigbasket.com/",
+        "service": "in.juspay.hyperpay",
+        "signature": "PsfuiP4/6ykUCnNw3nDhiQ8qSqhSjxjoM4GMuBMzzxl/aBa+m3mzgBmtzbqFr9dA9UZcF1e+2408v2ckNIqgfQ/0zckWwD3oruwvP4qR5deJHZfpdNgfyqQRv/lAPJ5c7E/fAG5KlLUUp0znosq9idPXa9gxZqJOlpmkL4RgNXYzCKT/8IqklKvOw0X+CkqXB4EmKWKItPMEogrmQ435JNBFGmPxaQuOqzK4zT4TmBVdjkOB+Geat6sGTi0ICZtvi1HWV5ICcl3YAlEnHPrHLkKydo8eWCOJup1FhVbFzHndcA6y+hkWnzjXWa0H+/jDJIwGoFA2+RXA8iSwVsrDkQ=="
+    },
+    "status": 0
+}
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/gift-card/v1/create
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				bb-decoded-mid=53622450
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=de69b1d0-6d1b-4fdb-9e10-7da0e937af0c
+				X-Timestamp=2024-08-21T15:51:52Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "payment_method_type": "NB_HDFC",
+    "image": "https://www.bigbasket.com/media/uploads/gift_card/birthday/images/xhdpi/birthday_large_Birthday5.png_700_475.png",
+    "recipients": [
+        {
+            "email_id": "ankur@bigbasket.com",
+            "gift_msg": "test gift card",
+            "name": "bot",
+            "mobile_no": "7022243452"
+        }
+    ],
+    "bb_txn_id": "f2d4f3e8d83ff456e521",
+    "sender_name": "QA",
+    "gift_card_amount": 100,
+    "payment_method": "NB_HDFC"
+}
+HTTP/1.1 200 OK
+Date: Wed, 21 Aug 2024 10:21:53 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 83
+Connection: keep-alive
+Server: nginx
+
+{
+    "payment_method": "NB_HDFC",
+    "redirect_to_pg": true,
+    "payment_method_type": "NB_HDFC"
+}
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/gift-card/internal/v1/update-payment
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				bb-decoded-mid=53622450
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=377f96ed-3f81-478d-8586-7f8200c6dbb7
+				X-Timestamp=2024-08-21T15:51:54Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "payment_status": "success",
+    "purchased_txn_list": [
+        4501117
+    ]
+}
+HTTP/1.1 200 OK
+Date: Wed, 21 Aug 2024 10:21:55 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+Connection: keep-alive
+Server: nginx
+
+{
+    "is_payment_status_updated": true
+}

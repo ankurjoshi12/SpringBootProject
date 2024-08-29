@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/userStyles.css}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css(version=${#dates.format(new java.util.Date(), 'yyyyMMddHHmmss')})}"> -->
+</head>
+<body>
+<h1>Welcome to the Home Page</h1>
+<div class="content">
+    <a th:href="@{/login}">Login</a> |
+    <a th:href="@{/register}">Register</a>
+</div>
+</body>
+</html>

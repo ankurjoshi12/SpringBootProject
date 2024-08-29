@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/userStyles.css}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">SWING</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="javelinDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Spartans Javelin
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="javelinDropdown">
+                        <a class="dropdown-item" href="/create-voucher">Create Voucher</a>
+                        <a class="dropdown-item" href="/get-voucher-list">Get Voucher List</a>
+                        <a class="dropdown-item" href="/get-campaign-info">Campaign Info</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="hertzdropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hertz Service 
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="javelinDropdown">
+                        <a class="dropdown-item" href="/sadmmapping">Fetch Route For Order</a>
+                        <a class="dropdown-item" href="/getOrderData">Get Order Data</a>
+                        <a class="dropdown-item" href="/sadmmapping">Get SA DM Slot Config</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="genesis" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Genesis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="genesis">
+                        <a class="dropdown-item" href="/create-gift-card">Create GiftCard</a>
+                        <a class="dropdown-item" href="/get-wallet-details">Get Wallet Amount</a>
+                        <a class="dropdown-item" href="/update-wallet-details">Fund Wallet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/member-details">Member</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/getSkusPickSubType">Sku Grouping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/serviceability">ServiceabilityService</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="genesis" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Important Links
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="genesis">
+                    	<a class="dropdown-item" href="http://mobilelab.bigbasket.com" target="_blank">Mobile Labs/Automation Dashboard</a>
+                    	<a class="dropdown-item" href="http://automation.bigbasket.com" target="_blank">Automation Dashboard</a>
+                    	<a class="dropdown-item" href="http://automation.bigbasket.com" target="_blank">GroundCover Dashboard</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>User Details</h1>
+        <form th:action="@{/user-details}" method="post">
+            <div class="form-group">
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="Enter Mobile Number" required/>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Details</button>
+        </form>
+        <div th:if="${userDetails != null}">
+            <p>Mobile Number: <span th:text="${userDetails.mobileNumber}"></span></p>
+            <p>Name: <span th:text="${userDetails.name}"></span></p>
+            <p>Email: <span th:text="${userDetails.email}"></span></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* Custom styles for User Details page */
+
+body {
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+.navbar {
+    margin-bottom: 20px; /* Space between navbar and content */
+}
+
+.container {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+}
+
+button {
+    width: 100%; /* Full width button */
+}
+
+button.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff; /* Border color */
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #004085; /* Darker border on hover */
+}

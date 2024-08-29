@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Wallet Utility</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/user-details">Gift Card</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+		<div class="container mt-4">
+			<h1>Create Gift Card</h1>
+			<form th:action="@{/create-gift-card}" method="post">
+				<div class="form-group">
+					<label for="entryContext">Entry Context Type</label> <select
+						id="entryContext" name="entryContext" class="form-control">
+						<option value="bb-b2c">b2c</option>
+						<option value="bbnow">bbnow</option>
+						<option value="bb-b2b">bb-b2b</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="mobile">Mobile Number</label> <input
+						type="mobile" class="form-control" id="mobileNumber"
+						name="mobile" placeholder="Enter Senders Member Mobile Number"
+						required />
+				</div>
+				<div class="form-group">
+					<label for="mobileRecepient">Recepient Mobile Number</label> <input
+						type="mobileRecepient" class="form-control" id="mobileRecepient"
+						name="mobileRecepient" placeholder="Enter Recepient Mobile Number"
+						required />
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label> <input type="email"
+						class="form-control" id="email" name="email"
+						placeholder="Enter Sender Email" required />
+				</div>
+				<div class="form-group">
+					<label for="emailRecepient">Recepient Email</label> <input type="email"
+						class="form-control" id="emailRecepient" name="emailRecepient"
+						placeholder="Enter Recepient Email" required />
+				</div>
+				<div class="form-group">
+					<label for="amount">Enter Amount</label> <input
+						type="amount" class="form-control" id="amount"
+						name="amount" placeholder="Enter Amount" required />
+				</div>
+				<button type="submit" class="btn btn-primary">Get Gift Card</button>
+			</form>
+			<div th:if="${message != null}">
+				<p class="alert alert-success" th:text="${message}"></p>
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+Request method:	POST
+Request URI:	https://smoke.bigbasket.com/mock/payment_svc/v2/payment/get-sdk-params/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=mock
+				bb-decoded-mid=54593120
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=fb023d32-aced-4908-8513-6b856c444f5d
+				X-Timestamp=2024-06-22T09:11:14Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "neucoins": "false",
+    "member_id": 54593120,
+    "amount": 100,
+    "app_version": "web",
+    "txn_type": "gift_card",
+    "member_email": "ankur@bigbasket.com",
+    "channel": "web",
+    "payment_method_locking": ""
+}
+HTTP/1.1 404 Not Found
+Date: Sat, 22 Jun 2024 03:41:15 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Etag: W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+
+Not Found

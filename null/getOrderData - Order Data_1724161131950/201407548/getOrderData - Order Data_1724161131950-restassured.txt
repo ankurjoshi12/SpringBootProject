@@ -1,0 +1,29 @@
+Request method:	GET
+Request URI:	http://jenkins.bigbasket.com/utils/executeDatabaseQuery?dbName=hqa-HERTZ&query=SELECT%20*%20FROM%20order_data%20WHERE%20order_id%20%3D%20%2712537472%27
+Proxy:			<none>
+Request params:	<none>
+Query params:	dbName=hqa-HERTZ
+				query=SELECT * FROM order_data WHERE order_id = '12537472'
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Tenant-Id=1
+				Authorization=Basic YmJxYWJvdDpxYWJvdHBhc3N3b3Jk
+				Accept=*/*
+				X-Tracker=eb7980dd-69dc-43e2-982c-0aefe421fc36
+				X-Timestamp=2024-08-20T20:14:07Z
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 20 Aug 2024 14:44:08 GMT
+Content-Length: 522
+Connection: keep-alive
+Server: nginx/1.4.6 (Ubuntu)
+
+{
+  "columnNames" : [ "created_on", "updated_on", "sa_id", "dm_id", "city_id", "ec_id", "ec_group_id", "order_id", "order_status", "route_assignment_status", "routing_status", "slot_from_time", "slot_to_time", "delivery_date", "fallback_order_dispatch_time", "slot_definition_id", "routing_batch_id", "delivery_id", "weight", "is_addon", "metadata", "unique_order", "updated_by_id", "created_by_id", "is_ready", "provider_id", "sku_service_time" ],
+  "numColumns" : 27,
+  "numRows" : 0,
+  "results" : [ ],
+  "rows" : [ ]
+}

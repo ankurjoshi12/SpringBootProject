@@ -1,0 +1,42 @@
+Request method:	POST
+Request URI:	http://hqa-svc.bigbasket.com/sku_grouping/internal/v1/rule_evaluate
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=8e9fa7d1-eac1-4c7d-8bd2-d3e55e6adb7c
+				X-Timestamp=2024-08-18T00:39:57Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "context_type": "PICK_SUB_TYPE",
+    "context_slug": "pick_sub_type",
+    "skus": [
+        "100000021"
+    ],
+    "fc_id": 356
+}
+HTTP/1.1 200 OK
+Date: Sat, 17 Aug 2024 19:10:00 GMT
+Content-Type: application/json
+Content-Length: 93
+Connection: keep-alive
+X-Tracker: e0c73261-d5cc-4a4a-a25f-b0649d46b25d
+
+[
+    {
+        "result": "null",
+        "fc_id": "356",
+        "context_id": 45,
+        "sku_id": "100000021"
+    }
+]

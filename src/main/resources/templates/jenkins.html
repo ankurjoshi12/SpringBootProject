@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Jenkins Job Pass Percentage</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="charts-container"></div>
+    <canvas id="allJobsPieChart"></canvas>
+    <script>
+        async function fetchJenkinsData() {
+            const response = await fetch('/jenkins/data');
+            const data = await response.json();
+            return data;
+        }
+
+        function createPieChart(container, title, passPercentage, failPercentage) {
+            const canvas = document.createElement('canvas');
+            container.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+            const data = {
+                labels: ['Pass', 'Fail'],
+                datasets: [{
+                    data: [passPercentage, failPercentage],
+                    backgroundColor: ['#36a2eb', '#ff6384']
+                }]
+            };
+            new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    title: {
+                        display: true,
+                        text: title
+                    }
+                }
+            });
+        }
+
+        async function init() {
+            const data = await fetchJenkinsData();
+            const container = document.getElementById('charts-container');
+
+            for (const [key, value] of Object.entries(data)) {
+                if (key.includes('Pass Percentage')) {
+                    const jobName = key.replace(' Pass Percentage', '');
+                    const passPercentage = value;
+                    const failPercentage = 100 - value;
+                    createPieChart(container, jobName, passPercentage, failPercentage);
+                }
+            }
+
+            // Create the aggregate pie chart
+            const allJobsPassPercentage = data["All Jobs Pass Percentage"];
+            const allJobsFailPercentage = data["All Jobs Fail Percentage"];
+            createPieChart(document.getElementById('allJobsPieChart').parentNode, "All Jobs", allJobsPassPercentage, allJobsFailPercentage);
+        }
+
+        init();
+    </script>
+</body>
+</html>

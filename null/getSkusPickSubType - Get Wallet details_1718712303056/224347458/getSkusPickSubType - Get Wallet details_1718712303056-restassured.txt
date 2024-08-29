@@ -1,0 +1,63 @@
+Request method:	POST
+Request URI:	http://bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com/sku_grouping/internal/v1/rule_evaluate
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-vouchers
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=0be9a09b-9bfa-4fc3-bbb6-87dc0196cec4
+				X-Timestamp=2024-06-18T22:43:47Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "context_type": "PICK_SUB_TYPE",
+    "context_slug": "pick_sub_type",
+    "skus": [
+        "40119014 ",
+        " 40160308 ",
+        " 102875 ",
+        " 281594"
+    ],
+    "fc_id": 641
+}
+HTTP/1.1 200 OK
+Date: Tue, 18 Jun 2024 17:13:48 GMT
+Content-Type: application/json
+Content-Length: 370
+Connection: keep-alive
+X-Tracker: 2a6cc95f-0b8b-4477-b77d-b66ef2b8f868
+
+[
+    {
+        "result": "FMCG-NH",
+        "fc_id": "641",
+        "context_id": 45,
+        "sku_id": "40119014"
+    },
+    {
+        "result": "FMCG-NH",
+        "fc_id": "641",
+        "context_id": 45,
+        "sku_id": "40160308"
+    },
+    {
+        "result": "FMCG-NH",
+        "fc_id": "641",
+        "context_id": 45,
+        "sku_id": "102875"
+    },
+    {
+        "result": "FMCG-NH",
+        "fc_id": "641",
+        "context_id": 45,
+        "sku_id": "281594"
+    }
+]

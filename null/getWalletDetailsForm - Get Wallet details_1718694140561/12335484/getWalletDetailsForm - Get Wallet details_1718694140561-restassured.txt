@@ -1,0 +1,114 @@
+Request method:	GET
+Request URI:	http://bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com/serviceability/internal/v1/sa/10031
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-vouchers
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=c7399b9f-28ad-4157-82a6-b23289ed3292
+				X-Timestamp=2024-06-18T12:33:54Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 18 Jun 2024 07:03:54 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Content-Encoding: gzip
+Server: nginx
+Vary: Accept-Encoding
+X-Tracker: c7399b9f-28ad-4157-82a6-b23289ed3292
+
+{
+    "integratedSaEcMap": {
+        
+    },
+    "geoSubAreas": [
+        
+    ],
+    "id": 10031,
+    "name": "HRBR-5K-B-SA",
+    "is_active": false,
+    "lmd_fc_id": 272,
+    "city_id": 1,
+    "entry_context_id": 100,
+    "short_name": "HRK",
+    "is_midmile": false,
+    "sa_type": {
+        "id": 3,
+        "name": "5K",
+        "slug": "5k",
+        "capacity_planning_days": 40
+    },
+    "sa_mode": {
+        "id": 1,
+        "name": "GEO",
+        "slug": "geo"
+    },
+    "dms": [
+        {
+            "id": 1,
+            "name": "VAN",
+            "slug": "van"
+        }
+    ],
+    "global_dms": [
+        {
+            "id": 1,
+            "name": "VAN",
+            "slug": "van"
+        },
+        {
+            "id": 2,
+            "name": "BIKE",
+            "slug": "bike",
+            "sub_area_id": 163
+        }
+    ],
+    "sub_area_dms": [
+        {
+            "id": 2,
+            "name": "BIKE",
+            "slug": "bike",
+            "sub_area_id": 163
+        }
+    ],
+    "sub_areas": [
+        {
+            "sub_area_type_slug": "delivery-area",
+            "sub_area_type_id": 1,
+            "id": 163,
+            "name": "HRBR 5K DS B",
+            "short_name": "HR",
+            "serviceability_area_id": 10031,
+            "is_active": true
+        }
+    ],
+    "entry_context_ids": [
+        15,
+        100
+    ],
+    "lmd_fc_paths": [
+        185
+    ],
+    "sa_transition_mode": "2-and-1",
+    "is_integrated_sa": false,
+    "additional_integration_information": {
+        "associated_sa_list": [
+            
+        ],
+        "associated_ec_list": [
+            
+        ],
+        "show_buttons": false,
+        "is_integrated_fc": false
+    }
+}

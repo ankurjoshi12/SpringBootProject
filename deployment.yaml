@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+   name: beans-new
+spec: 
+   replicas: 2
+   selector: 
+      matchLabels:
+         app: beans-new
+         tier: backend
+   template: 
+      metadata: 
+         labels:
+            app: beans-new
+            tier: backend
+      spec:
+         containers: 
+         - name: second-bean
+           image: ankurjoshihld/my-springboot-app:latest
+         

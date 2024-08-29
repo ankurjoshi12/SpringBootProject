@@ -1,0 +1,113 @@
+Request method:	GET
+Request URI:	http://uat-svc.bigbasket.com/wallet/v1/details
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				bb-decoded-mid=53622450
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=dc7299c1-7854-442c-8b18-5179ec688277
+				X-Timestamp=2024-08-23T07:19:14Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Fri, 23 Aug 2024 01:49:15 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 472
+Connection: keep-alive
+Server: nginx
+
+{
+    "enable": true,
+    "total_balance": -1001,
+    "current_wallet_balance": -1001,
+    "total_expiry_amount": 0,
+    "wallets": [
+        {
+            "name": "PRIMARY",
+            "balance": -1001
+        }
+    ],
+    "recharge_denominations": [
+        100,
+        500,
+        1000,
+        2000
+    ],
+    "preferred_recharge_amt": 1000,
+    "recharge_limit_min": 1001,
+    "recharge_limit_max": 11001,
+    "recharge_max_fixed": 10000,
+    "notification": {
+        "priority": "low",
+        "type": "negative_balance",
+        "header": "Clear pending dues",
+        "description": "Add money to clear pending dues and ensure faster checkout every time!"
+    }
+}
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/wallet/internal/v1/activity
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=57825390-76e2-40bb-b06b-0b5002b0a346
+				X-Timestamp=2024-08-23T07:19:15Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "member_id": 53622450,
+        "ec_id": 100,
+        "amount": 1101,
+        "reference_id": "432412412",
+        "wallet_activity_type": "credit",
+        "secondary_reference_type": "",
+        "voucher_code": "",
+        "reference_type": "bbstar",
+        "reason_id": 13,
+        "additional_info": {
+            "multiple_payment_method": false
+        },
+        "send_communication": true,
+        "unique_request_id": "45d8b746-18cc-4e69-bbda-e90eade0c897",
+        "wallet_type": "primary",
+        "remarks": "Testing Single Credit for Migrated Member",
+        "secondary_reference_id": ""
+    }
+]
+HTTP/1.1 200 OK
+Date: Fri, 23 Aug 2024 01:49:15 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 149
+Connection: keep-alive
+Server: nginx
+
+[
+    {
+        "new_balance": 100,
+        "amount": 1101,
+        "previous_balance": -1001,
+        "activity_log_id": 1000033386,
+        "unique_request_id": "45d8b746-18cc-4e69-bbda-e90eade0c897"
+    }
+]

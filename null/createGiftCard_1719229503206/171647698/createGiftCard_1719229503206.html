@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        createGiftCard_1719229503206
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="script-src * 'unsafe-eval' 'unsafe-inline';"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <style>
+
+        .bb-logo {
+        width: 8em;
+        height: auto;
+        margin-right: 2em;
+        }
+
+        .navbar {
+        background: black;
+        }
+
+        .nav-link {
+        font-size: 0.9em;
+        }
+
+        .suiteName {
+        color:white;
+        font-family: "Andale Mono";
+        letter-spacing: 0.4em;
+        margin-right: 1em;
+        }
+
+
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+
+    </style>
+
+    <script>
+function openTab(evt, type) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(type).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
+</head>
+<body onload="updateFailureMessage()">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <img class="bb-logo" src="https://bb-qamedia.s3.amazonaws.com/bb-automation/bb-logo.png"></img>
+        <ul class="nav navbar-nav navbar-right ml-auto">
+            <li class="suiteName">
+                MobileAuotmationSprintBoot
+            </li>
+        </ul>
+</nav>
+
+<div id="content-wrapper" style="margin-top:5em;">
+    <div class="container-fluid" style="margin-bottom:1em;">
+        <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'description')">About</button>
+            <button class="tablinks" onclick="openTab(event, 'timing')">Execution Timing</button>
+            <button class="tablinks" onclick="openTab(event, 'failure')">Failure Details</button>
+            <button class="tablinks" onclick="openTab(event, 'logs')">Logs</button>
+        </div>
+
+        <div id="description" class="tabcontent" style="display:block">
+            <h6><strong>Testcase Name :</strong>
+            createGiftCard</h6>
+
+            <h6><strong>Author :</strong>
+            Ankur</h6>
+
+            <h6><strong>Description :</strong>
+            test desc </h6>
+
+        </div>
+
+        <div id="timing" class="tabcontent">
+            <h6><strong>Start Date/Time :</strong></h6>
+            <p>${testStartDate}  T  ${testStartTime}</p>
+
+            <h6><strong>End Date/Time :</strong></h6>
+            <p>${testEndDate}  T  ${testEndTime}</p>
+
+            <h6><strong>Execution Time :</strong></h6>
+            <p>${testExecutionTime}</p>
+        </div>
+
+        <div id="failure" class="tabcontent">
+            <h6 id="failureMessage" >
+                <strong>Failure message : </strong>
+                <span id="failureMessageSpan" style="color:red;">{failureMessage}</span>
+            </h6>
+        </div>
+
+        <div id="logs" class="tabcontent">
+            <h6><a href="createGiftCard_1719229503206-restassured.txt" target="_blank">RestAssured Logs</a></h6>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="margin-bottom:1em;">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered" style="background-color:#ffffff; table-layout: fixed; word-wrap: break-word;">
+                <thead class="thead-dark">
+                <tr>
+                    <th style="text-align:center;">Serial Number</th>
+                    <th style="width: 60%;">Step Description</th>
+                    <th style="text-align:center;">Result</th>
+                    <th style="text-align:center;">Screenshot</th>
+                    <th style="text-align:center;">Time (HH:MM:SS)</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+
+
+
+<tr>    <td style="text-align:center;">1</td>   <td><pre>user type b2c</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:47</td></tr><tr>    <td style="text-align:center;">2</td>   <td><pre>Get member id  , query -select id from member_member where email='ankur@bigbasket.com'</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:47</td></tr><tr>    <td style="text-align:center;">3</td>   <td><pre>Executing Query - select id from member_member where email='ankur@bigbasket.com'</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:47</td></tr><tr>    <td style="text-align:center;">4</td>   <td><pre>Member Id -54593120</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:48</td></tr><tr>    <td style="text-align:center;">5</td>   <td><pre>Get sdk params api response -{
+  "message": "success", 
+  "response": {
+    "amount": 100, 
+    "bb_txn_id": "251ddf9f23b3dbfeed8f", 
+    "client_id": "bigbasket_web", 
+    "customer_id": "MzA5NTQ2NDU5MA==", 
+    "env": "sandbox", 
+    "fall_back": false, 
+    "handle_payment_attempt": true, 
+    "merchant_id": "bb_staging", 
+    "merchant_key_id": "2769", 
+    "mobile_no": 8888888888, 
+    "offer_details": {}, 
+    "order_details": "{\"order_id\": \"251ddf9f23b3dbfeed8f\", \"merchant_id\": \"bb_staging\", \"amount\": \"100\", \"timestamp\": \"1719229609\", \"customer_id\": \"MzA5NTQ2NDU5MA==\", \"udf1\": \"bigbasket\", \"udf2\": \"b2c\", \"udf3\": \"gift_card\", \"udf4\": \"1\", \"udf5\": \"\", \"offer_details\": {\"offer_applied\": \"false\"}, \"credit_billing\": \"false\", \"return_url\": \"https://bigbasket.com/\", \"metadata.amount_category\": {\"food\": \"0\", \"nonfood\": \"0\"}, \"metadata.JUSPAY:gateway_reference_id\": \"bigbasket_b2c_gift_card\", \"features\": {\"paymentAttempt\": {\"enable\": true}}}", 
+    "order_summary": false, 
+    "polling_interval": null, 
+    "polling_timeout": null, 
+    "return_url": "https://bigbasket.com/", 
+    "service": "in.juspay.hyperpay", 
+    "signature": "PwS5/eW0W0glFQdZiJCp8qmgMd2lEKhoNOI1yy3TLs/p3cv6vpCcefBdEo5ZR8c6kaY7yc8Wb8tBLTcSWpnJntPAtTENjf+o/sXGDo9yenHqWYSpaNZlZJ00iv0SvmCHZ1kdaY1nUZ0g1aZMYFsYAuTkbvrOMiyT4tATKJQHgtL7bwyr4Zj97Sri4Y0g8vckkwpDAQJX8C06+TTaU2mKMZjhQLLatucYMWp4jMzo+/FIXPITY23y4S3ENcz0rQwyjb0/UjOP4sJqfmpqAwqu3kf0jEzfx5fxqz4BvGH6lWYS3GKZVGuSjx9IXu+L20EfolXxGgbc+ktiGN7UBT3eTw=="
+  }, 
+  "status": 0
+}
+</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:49</td></tr><tr>    <td style="text-align:center;">6</td>   <td><pre>bb_txn_id - 251ddf9f23b3dbfeed8f</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:49</td></tr><tr>    <td style="text-align:center;">7</td>   <td><pre>Get member id  , query -select id from member_member where email='ankur@bigbasket.com'</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:49</td></tr><tr>    <td style="text-align:center;">8</td>   <td><pre>Executing Query - select id from member_member where email='ankur@bigbasket.com'</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:49</td></tr><tr>    <td style="text-align:center;">9</td>   <td><pre>Member Id -54593120</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:50</td></tr><tr>    <td style="text-align:center;">10</td>   <td><pre>user type b2c</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:50</td></tr><tr>    <td style="text-align:center;">11</td>   <td><pre>Create Gift Card Payment api response -{"payment_method":"NB_HDFC","redirect_to_pg":true,"payment_method_type":"NB_HDFC"}
+</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:50</td></tr><tr>    <td style="text-align:center;">12</td>   <td><pre>Getting PurchasedEntity from txn id </pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:51</td></tr><tr>    <td style="text-align:center;">13</td>   <td><pre>Gift card update payment api response -{"errors":[{"code":5001,"code_str":"GC5001","display_msg":"Something went wrong.Please try after sometime!","type":"ThirdPartyAPI","msg":"Authorization Token Expired."}]}
+</pre></td>    <td style="text-align:center; color:Green;">Pass</td>    <td style="text-align:center;">No Snapshot</td>   <td style="text-align:center;">17:16:52</td></tr>

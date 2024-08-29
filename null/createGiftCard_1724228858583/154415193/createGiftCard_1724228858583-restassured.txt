@@ -1,0 +1,121 @@
+Request method:	POST
+Request URI:	http://hqa-svc.bigbasket.com/payment_svc/v2/payment/get-sdk-params/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=hqa-svc.bigbasket.com
+				bb-decoded-mid=54593120
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=95aeaac2-8439-472d-ba65-eb9e483a683f
+				X-Timestamp=2024-08-21T15:44:15Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "neucoins": "false",
+    "member_id": 54593120,
+    "amount": 100,
+    "app_version": "web",
+    "txn_type": "gift_card",
+    "member_email": "ankur@bigbasket.com",
+    "channel": "web",
+    "payment_method_locking": ""
+}
+HTTP/1.1 200 OK
+Date: Wed, 21 Aug 2024 10:14:16 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Content-Encoding: gzip
+Server: nginx
+Vary: Accept-Encoding
+
+{
+    "message": "success",
+    "response": {
+        "amount": 100,
+        "bb_txn_id": "8b6cfff73474c2309147",
+        "client_id": "bigbasket_web",
+        "customer_id": "MzA5NTQ2NDU5MA==",
+        "env": "sandbox",
+        "fall_back": false,
+        "handle_payment_attempt": true,
+        "merchant_id": "bb_staging",
+        "merchant_key_id": "2769",
+        "mobile_no": 8888888888,
+        "offer_details": {
+            
+        },
+        "order_details": "{\"order_id\": \"8b6cfff73474c2309147\", \"merchant_id\": \"bb_staging\", \"amount\": \"100\", \"timestamp\": \"1724235256\", \"customer_id\": \"MzA5NTQ2NDU5MA==\", \"udf1\": \"bigbasket\", \"udf2\": \"b2c\", \"udf3\": \"gift_card\", \"udf4\": \"1\", \"udf5\": \"\", \"offer_details\": {\"offer_applied\": \"false\"}, \"credit_billing\": \"false\", \"return_url\": \"https://bigbasket.com/\", \"metadata.amount_category\": {\"food\": \"0\", \"nonfood\": \"0\"}, \"metadata.JUSPAY:gateway_reference_id\": \"bigbasket_b2c_gift_card\", \"features\": {\"paymentAttempt\": {\"enable\": true}}}",
+        "order_summary": false,
+        "polling_interval": null,
+        "polling_timeout": null,
+        "return_url": "https://bigbasket.com/",
+        "service": "in.juspay.hyperpay",
+        "signature": "kXcBkGfkBQZaPkmte+hvnsZs1cm1UqKkjj549qut8076VSnHM5WVYV4H2wwHH1UvcRtd1wV2oyX6KLgdOkciV4LFvbdFV3CK9kKoeXmf7V6kPaoAzcggkwr8muDj+yBElV5PTo1d0bIePnn7j6Vf7ENzw8eqPBUQKKKSndWfPsW9AujukWNcdBuWqAk91di1U86FMEc2P/7pbL4P+tXGyBHVFUIhb3PXv9OCV82h7ycaQaDFyvk3vupuFcyZ16IPIUsI7YZnENSefYv1gOCfoCbnFRewEWgN1VfRU6LJzbHDlihoIBIuJ4A40CqJRN3DHAuYbzKNDtEQY8tpFDULJg=="
+    },
+    "status": 0
+}
+Request method:	POST
+Request URI:	http://hqa-svc.bigbasket.com/gift-card/v1/create
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=hqa-svc.bigbasket.com
+				bb-decoded-mid=54593120
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=d560d701-9ed4-4520-93be-56176738eee9
+				X-Timestamp=2024-08-21T15:44:16Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "payment_method_type": "NB_HDFC",
+    "image": "https://www.bigbasket.com/media/uploads/gift_card/birthday/images/xhdpi/birthday_large_Birthday5.png_700_475.png",
+    "recipients": [
+        {
+            "email_id": "ankur@bigbasket.com",
+            "gift_msg": "test gift card",
+            "name": "bot",
+            "mobile_no": "7022243452"
+        }
+    ],
+    "bb_txn_id": "8b6cfff73474c2309147",
+    "sender_name": "QA",
+    "gift_card_amount": 100,
+    "payment_method": "NB_HDFC"
+}
+HTTP/1.1 500 Internal Server Error
+Date: Wed, 21 Aug 2024 10:14:17 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 110
+Connection: keep-alive
+Server: nginx
+
+{
+    "errors": [
+        {
+            "code": 1118,
+            "code_str": "GC1118",
+            "display_msg": "",
+            "type": "Generic",
+            "msg": "GiftCard not enabled"
+        }
+    ]
+}

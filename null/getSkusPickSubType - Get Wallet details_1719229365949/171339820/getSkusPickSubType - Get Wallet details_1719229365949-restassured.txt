@@ -1,0 +1,30 @@
+Request method:	POST
+Request URI:	http://hqa-svc.abc.com/sku_grouping/internal/v1/rule_evaluate
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-vouchers
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=c5b1d455-7b12-4071-8c24-71c3dacbd8fc
+				X-Timestamp=2024-06-24T17:13:39Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "context_type": "PICK_SUB_TYPE",
+    "context_slug": "pick_sub_type",
+    "skus": [
+        "40119014 ",
+        " 40160308 ",
+        " 102875 ",
+        " 281594"
+    ],
+    "fc_id": 641
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Wallet Utility</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/user-details">Fund Wallet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="javelinDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Javelin
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="javelinDropdown">
+                        <a class="dropdown-item" href="/create-voucher">Get Member Wallet</a>
+                        <a class="dropdown-item" href="/get-voucher-list">Update Member Wallet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/get-wallet-details">Get Wallet Amount</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/get-wallet-details">Update Wallet AMount</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+	<div th:fragment="content">
+		<div class="container mt-4" th:fragment="content">
+			<h1>Fund Wallet</h1>
+			<form th:action="@{/update-wallet-details}" method="post">
+				<div class="form-group">
+					<label for="entryContext">Entry Context Type</label> <select
+						id="entryContext" name="entryContext" class="form-control">
+						<option value="bb-b2c">b2c</option>
+						<option value="bbnow">bbnow</option>
+						<option value="bb-b2b">bb-b2b</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="mobileNumber">Mobile Number</label> <input
+						type="mobileNumber" class="form-control" id="mobileNumber"
+						name="mobileNumber" placeholder="Enter Member Mobile Number"
+						required />
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label> <input type="email"
+						class="form-control" id="email" name="email"
+						placeholder="Enter Member Email" required />
+				</div>
+				<div class="form-group">
+					<label for="walletAmount">Enter Wallet Amount</label> <input
+						type="walletAmount" class="form-control" id="walletAmount"
+						name="walletAmount" placeholder="Enter Wallet Amount" required />
+				</div>
+				<div class="form-group">
+					<label for="walletaction">Wallet Action</label> <select
+						id="walletaction" name="walletaction" class="form-control">
+						<option value="debit">Debit</option>
+						<option value="credit">Credit</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Get Wallet
+					Details</button>
+			</form>
+			<div th:if="${message != null}">
+				<p class="alert alert-success" th:text="${message}"></p>
+			</div>
+		</div>
+	</div>
+
+	<!--  <div class="container mt-4">
+        <h1>Wallet Details</h1>
+        <form th:action="@{/wallet-details}" method="post">
+            <div class="form-group">
+                <label for="memberEmail">Member Email</label>
+                <input type="email" class="form-control" id="memberEmail" name="memberEmail" placeholder="Enter Member Email" required/>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div th:if="${message != null}">
+        	<p>Wallet API Resposne : <span th:text="${message}"></span></p>
+            <p>Email: <span th:text="${memberDetails.email}"></span></p>
+            <p>Name: <span th:text="${memberDetails.name}"></span></p>
+            <p><strong>Mobile Number:</strong> <span th:text="${memberDetails.mobileNumber}"></span></p>
+            Add more details as necessary
+        </div>
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,167 @@
+Request method:	GET
+Request URI:	http://uat-svc.bigbasket.com/wallet/v1/details
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				bb-decoded-mid=53622450
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=1128b81d-bd85-4d43-a104-8709f7d09b06
+				X-Timestamp=2024-08-23T07:31:39Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Fri, 23 Aug 2024 02:01:39 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 304
+Connection: keep-alive
+Server: nginx
+
+{
+    "enable": true,
+    "total_balance": 100,
+    "current_wallet_balance": 100,
+    "total_expiry_amount": 0,
+    "wallets": [
+        {
+            "name": "PRIMARY",
+            "balance": 100
+        }
+    ],
+    "recharge_denominations": [
+        100,
+        500,
+        1000,
+        2000
+    ],
+    "preferred_recharge_amt": 1000,
+    "recharge_limit_min": 10,
+    "recharge_limit_max": 9900,
+    "recharge_max_fixed": 10000,
+    "notification": {
+        
+    }
+}
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/wallet/internal/v1/activity
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=cb8f1b86-146a-4caf-a6f4-c311a6061cca
+				X-Timestamp=2024-08-23T07:31:39Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "member_id": 53622450,
+        "ec_id": 100,
+        "amount": 100,
+        "reference_id": "432412412",
+        "wallet_activity_type": "debit",
+        "secondary_reference_type": "",
+        "voucher_code": "",
+        "reference_type": "bbstar",
+        "reason_id": 13,
+        "additional_info": {
+            "multiple_payment_method": false
+        },
+        "send_communication": true,
+        "unique_request_id": "62aeb2db-ddcb-41a3-97ea-8f1fb0508ce9",
+        "wallet_type": "primary",
+        "remarks": "Testing Single Credit for Migrated Member",
+        "secondary_reference_id": ""
+    }
+]
+HTTP/1.1 200 OK
+Date: Fri, 23 Aug 2024 02:01:40 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 144
+Connection: keep-alive
+Server: nginx
+
+[
+    {
+        "new_balance": 0,
+        "amount": 100,
+        "previous_balance": 100,
+        "activity_log_id": 1000033387,
+        "unique_request_id": "62aeb2db-ddcb-41a3-97ea-8f1fb0508ce9"
+    }
+]
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/wallet/internal/v1/activity
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=uat-svc.bigbasket.com
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=5d2a5af3-9508-4b7e-aa91-e5dfd9a433d5
+				X-Timestamp=2024-08-23T07:31:40Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "member_id": 53622450,
+        "ec_id": 100,
+        "amount": 100,
+        "reference_id": "432412412",
+        "wallet_activity_type": "credit",
+        "secondary_reference_type": "",
+        "voucher_code": "",
+        "reference_type": "bbstar",
+        "reason_id": 13,
+        "additional_info": {
+            "multiple_payment_method": false
+        },
+        "send_communication": true,
+        "unique_request_id": "f76429a0-42a3-4067-a25c-de9f4a136b63",
+        "wallet_type": "primary",
+        "remarks": "Testing Single Credit for Migrated Member",
+        "secondary_reference_id": ""
+    }
+]
+HTTP/1.1 200 OK
+Date: Fri, 23 Aug 2024 02:01:40 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 144
+Connection: keep-alive
+Server: nginx
+
+[
+    {
+        "new_balance": 100,
+        "amount": 100,
+        "previous_balance": 0,
+        "activity_log_id": 1000033388,
+        "unique_request_id": "f76429a0-42a3-4067-a25c-de9f4a136b63"
+    }
+]

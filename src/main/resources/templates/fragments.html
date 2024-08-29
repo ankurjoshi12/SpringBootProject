@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fragments</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <div th:include="fragments :: default-content"></div>
+    </div>
+
+    <div th:fragment="default-content">
+        <div th:replace="update-wallet-details :: content"></div>
+    </div>
+</body>
+</html>

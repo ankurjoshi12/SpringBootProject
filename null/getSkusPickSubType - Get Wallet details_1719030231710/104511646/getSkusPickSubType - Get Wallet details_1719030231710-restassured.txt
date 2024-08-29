@@ -1,0 +1,39 @@
+Request method:	POST
+Request URI:	https://smoke.bigbasket.com/mock/sku_grouping/internal/v1/rule_evaluate
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-stable
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=2c998728-1e80-44f5-9263-0563be8c1d61
+				X-Timestamp=2024-06-22T10:45:11Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "context_type": "PICK_SUB_TYPE",
+    "context_slug": "pick_sub_type",
+    "skus": [
+        "40119014 ",
+        " 40160308 ",
+        " 102875 ",
+        " 281594"
+    ],
+    "fc_id": 641
+}
+HTTP/1.1 404 Not Found
+Date: Sat, 22 Jun 2024 05:15:13 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Etag: W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+
+Not Found

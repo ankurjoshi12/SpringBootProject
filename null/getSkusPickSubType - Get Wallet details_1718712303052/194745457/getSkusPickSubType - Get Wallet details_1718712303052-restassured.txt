@@ -1,0 +1,30 @@
+Request method:	POST
+Request URI:	http://bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com/sku_grouping/internal/v1/rule_evaluate
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-vouchers
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=69b8c332-a7ee-4c58-87cd-097be89a0fbd
+				X-Timestamp=2024-06-18T19:47:45Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "context_type": "PICK_SUB_TYPE",
+    "context_slug": "pick_sub_type",
+    "skus": [
+        "40119014 ",
+        " 40160308 ",
+        " 102875 ",
+        " 281594"
+    ],
+    "fc_id": 641
+}

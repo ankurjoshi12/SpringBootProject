@@ -1,0 +1,133 @@
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/javelin/admin/be/api/v1/campaigns/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Tenant-Id=1
+				x-project=bb-vouchers
+				Authorization=Basic YmJhc2tldDphbGxvd2Vk
+				Accept=*/*
+				X-Tracker=09028333-a037-4ce6-a432-31f1df9d51db
+				X-Timestamp=2024-07-08T15:48:39Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "end_date": "2024-09-08 15:48:39",
+    "owner": 3,
+    "creator": "nageswara.bandi@bigbasket.com",
+    "kpi_value": "50",
+    "kpi_name": "ORDER COUNT",
+    "business_type": "b2c",
+    "elements": [
+        {
+            "types": [
+                "Discounts",
+                "Promos"
+            ],
+            "label": "OFFERS",
+            "value": "offers",
+            "selected": true
+        }
+    ],
+    "name": "Automation_Campaign_7265444_c6648782-2761-4439-8dbb-d671c0d21e74TGBl",
+    "theme": [
+        8
+    ],
+    "type": "NORMAL",
+    "start_date": "2024-07-08 16:48:39"
+}
+Request method:	POST
+Request URI:	http://uat-svc.bigbasket.com/javelin/admin/be/api/v1/campaigns/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Tenant-Id=1
+				x-project=bb-vouchers
+				Authorization=Basic YmJhc2tldDphbGxvd2Vk
+				Accept=*/*
+				X-Tracker=09028333-a037-4ce6-a432-31f1df9d51db
+				X-Timestamp=2024-07-08T15:48:39Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "end_date": "2024-09-08 15:48:39",
+    "owner": 3,
+    "creator": "nageswara.bandi@bigbasket.com",
+    "kpi_value": "50",
+    "kpi_name": "ORDER COUNT",
+    "business_type": "b2c",
+    "elements": [
+        {
+            "types": [
+                "Discounts",
+                "Promos"
+            ],
+            "label": "OFFERS",
+            "value": "offers",
+            "selected": true
+        }
+    ],
+    "name": "Automation_Campaign_7265444_c6648782-2761-4439-8dbb-d671c0d21e74TGBl",
+    "theme": [
+        8
+    ],
+    "type": "NORMAL",
+    "start_date": "2024-07-08 16:48:39"
+}
+HTTP/1.1 200 OK
+Date: Mon, 08 Jul 2024 10:18:40 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 409
+Connection: keep-alive
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Origin: https://admin.bigbasket.com
+Etag: W/"199-P6HqrtfGuYjx0a13PX5lcQmSJVo"
+Vary: Accept-Encoding
+X-Powered-By: Express
+
+{
+    "status_code": 100,
+    "status": "SUCCESS",
+    "data": {
+        "campaign_id": 188605,
+        "tabs": [
+            {
+                "label": "Campaign Setup",
+                "value": "campaign-setup",
+                "enabled": true
+            },
+            {
+                "label": "Segmentation",
+                "value": "segmentation",
+                "enabled": true
+            },
+            {
+                "enabled": false,
+                "label": "offers",
+                "value": "offers"
+            }
+        ],
+        "elements": [
+            {
+                "types": [
+                    "Discounts",
+                    "Promos"
+                ],
+                "label": "OFFERS",
+                "value": "offers",
+                "selected": true
+            }
+        ]
+    },
+    "status_msg": "campaign has been successfully created"
+}

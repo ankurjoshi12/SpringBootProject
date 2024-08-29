@@ -1,0 +1,39 @@
+Request method:	GET
+Request URI:	http://bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com/wallet/v1/details
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Project=bb-vouchers
+				X-Tenant-Id=1
+				accept=application/json
+				X-Caller=Automation
+				Host=bbadmin:bask3t%23%40!@hqa-svc.bigbasket.com
+				bb-decoded-mid=54593120
+				X-Entry-Context-Id=100
+				X-Entry-Context=bb-b2c
+				X-Tracker=3c1b438d-69c0-4626-95fa-e7516a356180
+				X-Timestamp=2024-06-14T14:56:18Z
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Date: Fri, 14 Jun 2024 09:26:19 GMT
+Content-Type: application/json
+Content-Length: 209
+Connection: keep-alive
+Server: nginx
+
+{
+    "errors": [
+        {
+            "code": 1005,
+            "code_str": "PAY1005",
+            "display_msg": "Oops! An Error occurred while processing your request!",
+            "type": "ThirdPartyAPI",
+            "msg": "Error in fetching balance from new wallet service"
+        }
+    ]
+}
